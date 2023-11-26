@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block active_brands %}Active{% endblock %}
+
+{% block content %}
+<section class="cars" id="cars">
+    <div class="heading">
+        <span>All Bikes</span>
+        <h2>We have all types BIKES</h2>
+        <p>We deal with bikes above 600cc, the brand includes SUZUKI, KAWASAKI, TRIUMPH and many more...</p>
+    </div>
+    <!--Cars container-->
+    <div class="cars-container container">
+        {% for bike_brand in brands %}
+            <div class="box">
+                <a href="{{ url_for('brand', name=bike_brand.lower()) }}"><img src="{{ url_for('static', filename='image/logos' + '/' + bike_brand.lower() + '.jpg') }}" alt=""></a>
+                <a href="{{ url_for('brand', name=bike_brand.lower()) }}"><h2>{{ bike_brand.upper() }}</h2></a> 
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="parts" id="parts">
+    <div class="heading">
+        <span>What We Offer</span>
+        <h2>Our Bikes are Always Excellent</h2>
+        <p>We always check our bikes and properly service it before sending to customers. </p>
+    </div>
+    <!--parts container-->
+    <div class="parts-container container">
+        {% for part in parts %}
+        <div class="box">
+            <img src="{{ url_for('static', filename='image/parts'+ '/' +part.lower()+'.png') }}" alt="{{ part.lower() }}">
+            <h3>{{ part.lower() }}</h3>
+            <span>Rs 3029.00</span>
+            <i class='bx bxs-star'>(6 Reviews)</i>
+            <a href="{{ url_for('personal_details') }}" class="btn">Buy Now</a>
+            <a href="#" class="details">View Details</a>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

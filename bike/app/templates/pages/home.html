@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block active_index %}Active{% endblock %}
+
+{% block content %}
+<section class="home" id="home">
+    <div class="home-text">
+        <h1>We have Everthing <br> your <span>bike</span> Need</h1>
+        <p>Starting from bikes all the way till maintanence, we do it all!.<br>
+        <h5>India's First 2<sup>nd</sup> hand bike shop.</h5> </p>
+        <!--home Button-->
+        <a href="{{ url_for('parts') }}" class="btn">Discover Now</a>
+    </div>
+
+</section>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'bike_base.html' %}
+
+{% block content %}
+    <section class="cars" id="cars">
+        <div class="heading">
+            <span>BMW Bikes</span>
+        </div>
+        <!--BIKES container-->
+        <div class="cars-container container">
+            <!--Box 1-->
+            <div class="card" style="width: 25rem;">
+                <img src="{{  url_for('static', filename='image/bikes' + '/' + '25.png') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">R Nine T</h5>
+                    <p class="card-text">Full stock bike running at only 5800 Km.<br>
+                        Delhi registered on 2015.<br>
+                        1<sup>st</sup>owner.
+                    </p><BR>
+                    <a href="#" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+            <div class="card" style="width: 22rem;">
+                <img src="{{  url_for('static', filename='image/bikes' + '/' + '26.png') }}" class="card-img-top" alt="...">
+                <div class="card-body"><br>
+                    <h5 class="card-title">S 1000 RR</h5>
+                    <p class="card-text">Full stock bike running at only 5800 Km.<br>
+                        Delhi registered on 2015.<br>
+                        1<sup>st</sup>owner.</p><BR>
+                    <a href="#" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'bike_base.html' %}
+
+{% block content %}
+    <section class="cars" id="cars">
+        <div class="heading">
+            <span>DUCATI Bikes</span>
+        </div>
+        <!--BIKES container-->
+        <div class="cars-container container">
+            <!--Box 1-->
+            <div class="card" style="width: 18rem;">
+                <img src="{{  url_for('static', filename='image/bikes' + '/' + '15.png') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Ducati Multistrada</h5>
+                    <p class="card-text">Full stock bike running at only 5800 Km.<br>
+                        Delhi registered on 2015.<br>
+                        1<sup>st</sup>owner.
+                    </p><BR>
+                    <a href="#" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="{{  url_for('static', filename='image/bikes' + '/' + '16.png') }}" class="card-img-top" alt="...">
+                <div class="card-body"><br>
+                    <h5 class="card-title">Ducati Diavel</h5>
+                    <p class="card-text">Full stock bike running at only 5800 Km.<br>
+                        Delhi registered on 2015.<br>
+                        1<sup>st</sup>owner.</p><BR>
+                    <a href="#" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+            <div class="card" style="width: 50rem;">
+                <img src="{{  url_for('static', filename='image/bikes' + '/' + '17.png') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Ducati Panigale V4</h5>
+                    <p class="card-text">Full stock bike running at only 5800 Km.<br>
+                        Delhi registered on 2015.
+                        1<sup>st</sup>owner.</p><BR>
+                    <a href="#" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+
+    </section>
+    {% endblock %}

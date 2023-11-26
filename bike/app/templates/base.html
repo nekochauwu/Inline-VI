@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline VI</title>
+    <!--Link To Css-->
+    <link rel="stylesheet" href={{ url_for('static', filename='style.css') }}>
+    <!--Box Icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!--Navbar-->
+    <header>
+        <!--Nav Container-->
+        <div class="nav container">
+            <!--Menu Icon-->
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <!--Logo-->
+            <a href="{{ url_for('index') }}" class="logo">Inline<span>VI</span></a>
+            <!--Navbar List-->
+            <ul class="navbar">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('brands') }}">Brands</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('parts') }}">Parts</a></li>
+            </ul>
+            <!--search Icon-->
+            <i class='bx bx-search' id="search-icon"></i>
+            <!--search Box-->
+            <div class="search-box container">
+                <input type="search" name="" id="" placeholder="Search here...">
+            </div>
+        </div>
+        </div>
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+    
+    <!--footer-->
+    <section class="footer">
+        <div class="footer-container container">
+            <div class="footer-box">
+                <a href="#" class="logo">Inline<span>VI</span></a>
+                <div class="social">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h3>Page</h3>
+                <a href="#">Home</a>
+                <a href="#">Cars</a>
+                <a href="#">Parts</a>
+                <a href="#">Sales</a>
+            </div>
+
+            <div class="footer-box">
+                <h3>Legal</h3>
+                <a href="#">Privacy</a>
+                <a href="#">Refund Policy</a>
+                <a href="#">Cookies Policy</a>
+            </div>
+
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <p>United States</p>
+                <p>Canada</p>
+                <p> Jaban</p>
+                <p>Germany</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Copyright-->
+    <div class="copyright">
+        <p>BIKESALES, made with &#10084;</p>
+    </div>
+
+    <!--Link To JS-->
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+
+</body>
+
+</html>
